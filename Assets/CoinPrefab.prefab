@@ -70,7 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: aa6ece7b24fb84d0f9f3938fb2d62901, type: 2}
     - target: {fileID: 919132149155446097, guid: ca5226d3ff2df4fe39a747d3031a17ba, type: 3}
       propertyPath: m_Name
-      value: coin
+      value: CoinPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5226d3ff2df4fe39a747d3031a17ba, type: 3}
+      propertyPath: m_TagString
+      value: CoinTag
       objectReference: {fileID: 0}
     - target: {fileID: 6170364737530096044, guid: ca5226d3ff2df4fe39a747d3031a17ba, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -111,7 +115,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
