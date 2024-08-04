@@ -5864,6 +5864,7 @@ MonoBehaviour:
   carPrefab: {fileID: 6549391681469067768, guid: 920900f16cfaa48cd8be82f581d351a6, type: 3}
   coinPrefab: {fileID: 8470090100877793667, guid: fb406eb8321b04649ad8c81d768f1ad3, type: 3}
   conePrefab: {fileID: 5589178144971270832, guid: 6a3b7d56f5cb74373b1da1b48b978e18, type: 3}
+  unityChan: {fileID: 4690734}
 --- !u!4 &1498682310
 Transform:
   m_ObjectHideFlags: 0
