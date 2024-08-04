@@ -82,7 +82,7 @@ public class UnityChanController : MonoBehaviour
         }
 
         //ジャンプしていない時にスペースが押されたらジャンプする
-        if ((Input.GetKeyDown(KeyCode.Space)||this.isJButtonDown) && this.transform.position.y < 0.5f)//連打するとJumpステート中にこの条件を満たしてしまう。JumpステートからLocomotionステートに遷移する条件は単なる時間経過であるため、Jumpステート中にこの条件を満たすとJumpステートの残り時間のアニメーションのまま動きが適用される。そのため、Jumpステートの残りアニメーション＋Locomotionステートの状態でジャンプアニメーションを起こしてしまう。
+        if ((Input.GetKeyDown(KeyCode.Space)||this.isJButtonDown) && this.transform.position.y < 0.5f&& this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Locomotion"))//連打するとJumpステート中にこの条件を満たしてしまう。JumpステートからLocomotionステートに遷移する条件は単なる時間経過であるため、Jumpステート中にこの条件を満たすとJumpステートの残り時間のアニメーションのまま動きが適用される。そのため、Jumpステートの残りアニメーション＋Locomotionステートの状態でジャンプアニメーションを起こしてしまう。追記：this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName("")で条件を追加し、連打時の問題を解消
         {
             //ジャンプアニメを再生
             this.myAnimator.SetBool("Jump", true);
